@@ -16,8 +16,6 @@ let NERDTreeIgnore=['\.o$']
 
 " Misc ===================================================================
 set backspace=indent,eol,start  " Configure backspace so it acts as it should act
-set whichwrap+=<,>,h,l,[,]      " Wrap left and right
-
 
 " Enable filetype plugins
 filetype indent on

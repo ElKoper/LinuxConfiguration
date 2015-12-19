@@ -1,3 +1,15 @@
 [submodule "source/.vim/bundle/nerdtree"]
 	path = source/.vim/bundle/nerdtree
 	url = git://github.com/scrooloose/nerdtree.git
+[submodule "source/.vim/bundle/vim-airline"]
+	path = source/.vim/bundle/vim-airline
+	url = git://github.com/bling/vim-airline
+[submodule "source/.vim/bundle/vim-colors-solarized"]
+	path = source/.vim/bundle/vim-colors-solarized
+	url = git://github.com/altercation/vim-colors-solarized.git
+[submodule "source/.vim/bundle/vim-fugitive"]
+	path = source/.vim/bundle/vim-fugitive
+	url = git://github.com/tpope/vim-fugitive.git
+[submodule "source/.vim/bundle/vim-gitgutter"]
+	path = source/.vim/bundle/vim-gitgutter
+	url = git://github.com/airblade/vim-gitgutter.git
