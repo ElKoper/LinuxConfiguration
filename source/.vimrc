@@ -12,6 +12,7 @@ call pathogen#helptags()
 
 " Pathogens plug-ins configuration =======================================
 let NERDTreeIgnore=['\.o$']
+set updatetime=250          "git-gutter update time  
 
 
 " Misc ===================================================================
