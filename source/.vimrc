@@ -11,9 +11,9 @@ call pathogen#helptags()
 
 
 " Pathogens plug-ins configuration =======================================
-let NERDTreeIgnore=['\.o$']
-set updatetime=250          "git-gutter update time  
-
+let NERDTreeIgnore=['\.o$'] 	" hide *.o files in NERDTree
+set updatetime=250          	" git-gutter update time
+nmap <F8> :TagbarToggle<CR> 	" use F8 to toogle tagbar
 
 " Misc ===================================================================
 set backspace=indent,eol,start  " Configure backspace so it acts as it should act
