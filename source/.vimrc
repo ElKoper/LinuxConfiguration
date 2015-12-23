@@ -11,9 +11,9 @@ call pathogen#helptags()
 
 
 " Pathogens plug-ins configuration =======================================
-let NERDTreeIgnore=['\.o$'] 	" hide *.o files in NERDTree
-set updatetime=250          	" git-gutter update time
-nmap <F8> :TagbarToggle<CR> 	" use F8 to toogle tagbar
+let NERDTreeIgnore=['\.o$'] 	    " hide *.o files in NERDTree
+set updatetime=1000          	    " git-gutter update time
+nnoremap t :TagbarToggle<CR>        " use t to toogle tagbar
 
 " Misc ===================================================================
 set backspace=indent,eol,start  " Configure backspace so it acts as it should act
@@ -49,8 +49,8 @@ set laststatus=2    " display the status line
 set number          " show line numbers
 set showmatch       " highlight matching [{()}]
 
-set showcmd         " show command in bottom bar
-set wildmenu        " visual autocomplete for command menu
+set showcmd                  " show command in bottom bar
+set wildmode=longest,list    " TAB completion settings
 
 set ttyfast         " faster redraw
 set lazyredraw      " redraw only when we need to.
