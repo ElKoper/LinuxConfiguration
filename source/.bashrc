@@ -12,17 +12,6 @@ alias gitri="git rebase -i"
 alias gitd="git diff"
 alias gits="git status"
 
-gitp() {
-   branch=$(git symbolic-ref HEAD | sed -e 's,.*/\(.*\),\1,')
-   git push origin $branch 
-}
-
-gitpf() {
-    branch=$(git symbolic-ref HEAD | sed -e 's,.*/\(.*\),\1,')
-    git push origin :$branch
-    git push origin $branch
-}
-
 # Enable tab completion in git aliases
 [ -f ~/other/git-completion.bash ] && source ~/other/git-completion.bash
 __git_complete gitc _git_checkout
@@ -30,7 +19,6 @@ __git_complete gitb _git_branch
 __git_complete gitr _git_rebase
 __git_complete gitri _git_rebase
 __git_complete gitd _git_diff
-
 
 # Remove trailing whitespaces
 trailcut(){
