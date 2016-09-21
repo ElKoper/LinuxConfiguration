@@ -10,6 +10,7 @@ alias gitb="git branch"
 alias gitr="git rebase"
 alias gitri="git rebase -i"
 alias gitd="git diff"
+alias gitds="git diff --stat"
 alias gits="git status"
 
 # Enable tab completion in git aliases
