@@ -20,6 +20,7 @@ __git_complete gitb _git_branch
 __git_complete gitr _git_rebase
 __git_complete gitri _git_rebase
 __git_complete gitd _git_diff
+__git_complete gitds _git_diff
 
 # Remove trailing whitespaces
 trailcut(){
