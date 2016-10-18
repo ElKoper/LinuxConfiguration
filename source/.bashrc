@@ -3,6 +3,8 @@ export TERM=xterm-256color
 
 # Use colored grep always
 alias grep="grep --color"
+alias grin="grep -rin"
+alias hgrep="history | grep"
 
 # Some git aliases 
 alias gitc="git checkout"
