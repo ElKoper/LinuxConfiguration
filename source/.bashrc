@@ -7,6 +7,7 @@ alias grin="grep -rin"
 alias hgrep="history | grep"
 
 # Some git aliases 
+alias gti="git"
 alias gitc="git checkout"
 alias gitb="git branch"
 alias gitr="git rebase"
