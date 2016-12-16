@@ -5,7 +5,9 @@ export TERM=xterm-256color
 alias diff="colordiff"
 alias grep="grep --color"
 alias grin="grep -rin"
-alias hgrep="history | grep"
+
+alias ghist="history | grep"
+alias gfind="find | grep"
 
 # Some git aliases 
 alias gitc="git checkout"
