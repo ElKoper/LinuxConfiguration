@@ -49,7 +49,7 @@ __git_complete gtid _git_diff
 __git_complete gtids _git_diff
 
 # Set editor to vim
-" git config --global core.editor "vim"
+# git config --global core.editor "vim"
 export GIT_EDITOR=vim
 
 # Remove trailing whitespaces
