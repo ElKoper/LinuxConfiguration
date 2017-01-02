@@ -2,7 +2,6 @@
 " have made, as well as sanely reset options when re-sourcing .vimrc
 set nocompatible
 
-
 " Pathogen ===============================================================
 " load pathogens plug-ins
 execute pathogen#infect()
@@ -11,12 +10,12 @@ call pathogen#helptags()
 
 
 " Pathogens plug-ins configuration =======================================
-let NERDTreeIgnore=['\.o$'] 	    " hide *.o files in NERDTree
-set updatetime=1000          	    " git-gutter update time
+let NERDTreeIgnore=['\.o$']         " hide *.o files in NERDTree
+set updatetime=1000                 " git-gutter update time
 nnoremap t :TagbarToggle<CR>        " use t to toogle tagbar
 
 " Misc ===================================================================
-set backspace=indent,eol,start  " Configure backspace so it acts as it should act
+set backspace=indent,eol,start      " Configure backspace so it acts as it should act
 
 " Enable filetype plugins
 filetype indent on
@@ -33,6 +32,14 @@ let g:solarized_termcolors=256
 set background=dark
 colorscheme solarized
 
+" 80 and 120 wrapline marked
+if exists('+colorcolumn')
+  set colorcolumn=80,120
+else
+  au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+  au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>120v.\+', -1)
+endif
+
 
 " Tabs and indents =======================================================
 set tabstop=4       " number of visual spaces per TAB
@@ -43,6 +50,9 @@ set expandtab       " tabs are spaces
 set autoindent
 set smartindent
 
+" Whitespaces ============================================================
+set listchars=eol:¬,tab:>-,trail:~,extends:>,precedes:<
+set list
 
 " UI Config ==============================================================
 set laststatus=2    " display the status line

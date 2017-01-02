@@ -1,6 +1,11 @@
 # Needed for vim schemes 
 export TERM=xterm-256color
 
+# make aliases
+alias make="make -j48"
+alias mkae="make"
+alias mcm="make clean; make"
+
 # Use colored grep and diff always
 alias diff="colordiff"
 alias grep="grep --color"
@@ -42,6 +47,10 @@ __git_complete gtir _git_rebase
 __git_complete gtiri _git_rebase
 __git_complete gtid _git_diff
 __git_complete gtids _git_diff
+
+# Set editor to vim
+" git config --global core.editor "vim"
+export GIT_EDITOR=vim
 
 # Remove trailing whitespaces
 trailcut(){
