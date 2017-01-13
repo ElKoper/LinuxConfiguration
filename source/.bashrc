@@ -1,9 +1,15 @@
 # Needed for vim schemes
 export TERM=xterm-256color
 
-# Use colored grep and diff always
+# Use colored commands
 alias diff="colordiff"
 alias grep="grep --color"
+alias ls="ls --color=auto"
+
+# ls aliases
+alias l.='ls -d .*'
+alias ll='ls -l'
+alias lla='ls -la'
 
 # grep aliases
 alias grin="grep -rin"
