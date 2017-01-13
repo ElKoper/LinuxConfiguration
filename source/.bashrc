@@ -1,36 +1,42 @@
-# Needed for vim schemes 
+# Needed for vim schemes
 export TERM=xterm-256color
-
-# make aliases
-alias make="make -j48"
-alias mkae="make"
-alias mcm="make clean; make"
 
 # Use colored grep and diff always
 alias diff="colordiff"
 alias grep="grep --color"
-alias grin="grep -rin"
 
+# grep aliases
+alias grin="grep -rin"
 alias ghist="history | grep"
 alias gfind="find | grep"
 
-# Some git aliases 
+# make aliases
+alias mkae="make"
+alias m48="make -j48"
+alias mcm="make clean; make"
+alias mcm48="make clean; make -j48"
+
+# git aliases
 alias gitc="git checkout"
 alias gitb="git branch"
 alias gitr="git rebase"
 alias gitri="git rebase -i"
 alias gitd="git diff"
 alias gitds="git diff --stat"
+alias gitdm="git diff master"
+alias gitdsm="git diff --stat master"
 alias gits="git status"
 
 alias gti="git"
-alias gtic="git checkout"
-alias gtib="git branch"
-alias gtir="git rebase"
-alias gtiri="git rebase -i"
-alias gtid="git diff"
-alias gtids="git diff --stat"
-alias gtis="git status"
+alias gtic="gitc"
+alias gtib="gitb"
+alias gtir="gitr"
+alias gtiri="gitri"
+alias gtid="gitd"
+alias gtids="gitds"
+alias gtidm="gitdm"
+alias gtidsm="gitdsm"
+alias gtis="gits"
 
 # Enable tab completion in git aliases
 [ -f ~/other/git-completion.bash ] && source ~/other/git-completion.bash
@@ -48,17 +54,19 @@ __git_complete gtiri _git_rebase
 __git_complete gtid _git_diff
 __git_complete gtids _git_diff
 
-# Set editor to vim
+# Set git editor to vim
 # git config --global core.editor "vim"
 export GIT_EDITOR=vim
 
 # Remove trailing whitespaces
 trailcut(){
-  sed -i 's/[ \t]*$//' "$1"
+  while [ "$1" != "" ]; do
+    sed -i 's/[ \t]*$//' "$1" && shift;
+  done;
 }
 
 # Change prompt
 [ -f ~/other/bash_prompt.sh ] && source ~/other/bash_prompt.sh
 
-# Load work only bashrc
+# Load work only .bashrc
 [ -f ~/.bashrc_work ] && source ~/.bashrc_work
