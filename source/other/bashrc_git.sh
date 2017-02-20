@@ -16,16 +16,6 @@ alias gtid="gitd"
 alias gtids="gitds"
 alias gtis="gits"
 
-alias gitcm="git checkout master"
-alias gitrm="git rebase master"
-alias gitdm="git diff master"
-alias gitdsm="git diff --stat master"
-
-alias gticm="gitcm"
-alias gtirm="gitrm"
-alias gtidm="gitdm"
-alias gtidsm="gitdsm"
-
 # enable tab completion in git aliases
 if [ -f ~/other/git-completion.bash ]; then
     source ~/other/git-completion.bash
