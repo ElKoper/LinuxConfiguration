@@ -1,5 +1,3 @@
-# Configure bash prompt
-
 # Colors with \[ ... \] enclosure (bash ignore them when computing the length of the prompt)
 Black='\[\e[0;30m\]'
 Red='\[\e[0;31m\]'
@@ -36,6 +34,8 @@ __prompt_command() {
     local exit_code="$?"
     PS1="\n"
 
+    # user, host
+    PS1+="${Blue}\u@\h${None}\n"
     # git prompt
     PS1+='$(if command -v __git_ps1 &>/dev/null ; then __git_ps1 "${_Cyan}%s${_None}\n${_None}"; fi)'
     # time

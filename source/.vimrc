@@ -62,8 +62,8 @@ set showmatch       " highlight matching [{()}]
 set showcmd                  " show command in bottom bar
 set wildmode=longest,list    " TAB completion settings
 
-set ttyfast         " faster redraw
-set lazyredraw      " redraw only when we need to.
+"set ttyfast         " faster redraw
+"set lazyredraw      " redraw only when we need to.
 
 
 " Searching ==============================================================
