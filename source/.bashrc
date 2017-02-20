@@ -9,6 +9,9 @@ alias diff="colordiff"
 alias grep="grep --color"
 alias ls="ls --color=auto"
 
+# vi -> vim
+alias vi='vim'
+
 # cd
 alias ..='cd ..'
 alias ...='cd ../..'
