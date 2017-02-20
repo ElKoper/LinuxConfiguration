@@ -9,7 +9,8 @@ alias diff="colordiff"
 alias grep="grep --color"
 alias ls="ls --color=auto"
 
-# vi -> vim
+# miscellaneous
+alias psw='ps auxf | grep `whoami`'
 alias vi='vim'
 
 # cd
@@ -18,18 +19,14 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias cd..='cd ..'
 
-# ls
-alias l.='ls -d .*'
-alias ll='ls -l'
-alias lla='ls -la'
-
-# ps
-alias psw='ps auxf | grep `whoami`'
-
 # grep
 alias grin="grep -rin"
 alias ghist="history | grep"
 alias gfind="find | grep"
+
+#ls
+alias la='ls -a'
+alias ll='ls -lah'
 
 
 # Functions -------------------------------------------------------------------
