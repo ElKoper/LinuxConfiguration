@@ -39,7 +39,8 @@ trailcut(){
 
 
 # Source another bashrc parts -------------------------------------------------
+[ -f ~/.bashrc_private ] && source ~/.bashrc_private
+
 [ -f ~/other/bashrc_prompt.sh ] && source ~/other/bashrc_prompt.sh
 [ -f ~/other/bashrc_git.sh ] && source ~/other/bashrc_git.sh
 
-[ -f ~/.bashrc_private ] && source ~/.bashrc_private
