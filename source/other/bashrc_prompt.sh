@@ -1,6 +1,7 @@
-# Colors with \[ ... \] enclosure (bash ignore them when computing the length of the prompt)
-Bold=1	# 1 - true, 0 - false
+# Bold: 1 - true, 0 - false
+Bold=0
 
+# Colors with \[ ... \] enclosure (bash ignore them when computing the length of the prompt)
 Black='\[\e[${Bold};30m\]'
 Red='\[\e[${Bold};31m\]'
 Green='\[\e[${Bold};32m\]'
@@ -34,10 +35,15 @@ source $DIR/git-prompt.sh
 # Prompt command
 __prompt_command() {
     local exit_code="$?"
-    PS1="\n"
+    PS1=""
 
-    ## user, host
-    #PS1+="${Blue}\u@\h${None}\n"
+    # newline
+    PS1+="\n"
+    # user, host
+    PS1+="${LGray}[\u@\h]${None}"
+
+    # newline
+    PS1+="\n"
     # time
     PS1+="${Yellow}[$(date +%k:%M)]${None}"
     # git prompt
@@ -45,9 +51,14 @@ __prompt_command() {
     # current directory
     PS1+="${Cyan}[\w]${None}"
     # error code
-    [[ 0 == "$exit_code" ]] && PS1+="${DGray}" || PS1+="${Red}" ; PS1+=" $exit_code${None}"
+    [[ 0 == "$exit_code" ]] && PS1+="${DGray}" || PS1+="${Red}"
+    PS1+=" $exit_code${None}"
+
+    # newline
+    PS1+="\n"
     # trail
-    PS1+="\n${Green}\$${None} "
+    [[ $(id -u) -eq 0 ]] && PS1+="${Red}" || PS1+="${Green}"
+    PS1+="\$ ${None}"
 }
 
 # Export prompt command
