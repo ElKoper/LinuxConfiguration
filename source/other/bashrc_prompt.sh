@@ -41,6 +41,10 @@ __prompt_command() {
     PS1+="\n"
     # user, host
     PS1+="${LGray}[\u@\h]${None}"
+    # jobs
+    [[ $(jobs | wc -c) -eq 0 ]] || PS1+="${Red}[stopped: \j]${None}"
+    # error code
+    [[ "$exit_code" == 0 ]] || PS1+="${Red}[error: ${exit_code}]${None}"
 
     # newline
     PS1+="\n"
@@ -50,9 +54,6 @@ __prompt_command() {
     PS1+='$(if command -v __git_ps1 &>/dev/null ; then __git_ps1 "${_Green}[%s]${_None}"; fi)'
     # current directory
     PS1+="${Cyan}[\w]${None}"
-    # error code
-    [[ 0 == "$exit_code" ]] && PS1+="${DGray}" || PS1+="${Red}"
-    PS1+=" $exit_code${None}"
 
     # newline
     PS1+="\n"
