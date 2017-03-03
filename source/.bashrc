@@ -38,6 +38,20 @@ trailcut(){
 }
 
 
+repobranchcurrent(){
+    repo forall -c 'printf "%b" "\e[0;31m${REPO_PATH}\e[0m: `git symbolic-ref --short HEAD 2> /dev/null`\n"'
+}
+repobranchlist(){
+    repo forall -c 'printf "%b" "\e[0;31m${REPO_PATH}\e[0m:\n"; git branch'
+}
+repobranchmanifest(){
+    repo forall -c 'printf "%b" "\e[0;31m${REPO_PATH}\e[0m: ${REPO_RREV##*/}\n"'
+}
+repofetchall(){
+    repo forall -c 'printf "%b" "\e[0;31m${REPO_PATH}\e[0m:\n"; git fetch gerrit ${REPO_RREV##*/}:${REPO_RREV##*/} --update-head-ok'
+}
+
+
 # Source another bashrc parts -------------------------------------------------
 [ -f ~/.bashrc_private ] && source ~/.bashrc_private
 
