@@ -11,7 +11,7 @@ echo "Existing files will not be replaced."
 
 # bash configuration
 [ -f ~/.bashrc ] && echo "File ~/.bashrc exists." || ln -s $DIR/source/.bashrc ~/.bashrc
-[ -d ~/other ] && echo "Directory ~/other exists." || ln -sd $DIR/source/other ~/other
+[ -d ~/.bashrc_other ] && echo "Directory ~/.bashrc_other exists." || ln -sd $DIR/source/.bashrc_other ~/.bashrc_other
 
 # update submodules
 cd $DIR && git submodule update --init

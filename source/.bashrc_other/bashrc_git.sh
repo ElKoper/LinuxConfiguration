@@ -16,6 +16,10 @@ alias gtid="gitd"
 alias gtids="gitds"
 alias gtis="gits"
 
+if [[ $(type gitk >/dev/null 2>/dev/null) -eq 0 ]]; then
+    alias gitk="git log --oneline --graph --decorate"
+fi
+
 # enable tab completion in git aliases
 if [ -f ~/other/git-completion.bash ]; then
     source ~/other/git-completion.bash

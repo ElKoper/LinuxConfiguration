@@ -53,8 +53,7 @@ repofetchall(){
 
 
 # Source another bashrc parts -------------------------------------------------
-[ -f ~/.bashrc_private ] && source ~/.bashrc_private
-
-[ -f ~/other/bashrc_prompt.sh ] && source ~/other/bashrc_prompt.sh
-[ -f ~/other/bashrc_git.sh ] && source ~/other/bashrc_git.sh
+if [ -f ~/.bashrc_private ];                then source ~/.bashrc_private;                fi
+if [ -f ~/.bashrc_other/bashrc_prompt.sh ]; then source ~/.bashrc_other/bashrc_prompt.sh; fi
+if [ -f ~/.bashrc_other/bashrc_git.sh ];    then source ~/.bashrc_other/bashrc_git.sh;    fi
 
