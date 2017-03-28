@@ -21,8 +21,8 @@ if [[ $(type gitk >/dev/null 2>/dev/null) -eq 0 ]]; then
 fi
 
 # enable tab completion in git aliases
-if [ -f ~/other/git-completion.bash ]; then
-    source ~/other/git-completion.bash
+if [ -f ~/.bashrc_other/git-completion.bash ]; then
+    source ~/.bashrc_other/git-completion.bash
 
     __git_complete gitc _git_checkout
     __git_complete gitb _git_branch
