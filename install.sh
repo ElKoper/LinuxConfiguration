@@ -6,12 +6,12 @@ pushd $DIR
 echo "Existing files will not be replaced."
 
 # vim configuration
-[ -f ~/.vimrc ] && echo "File ~/.vimrc exists." || ln -s ./source/.vimrc ~/.vimrc
-[ -d ~/.vim ] && echo "Directory ~/.vim exists." || ln -sd ./source/.vim ~/.vim
+[ -f ~/.vimrc ] && echo "File ~/.vimrc exists." || ln -s `pwd`/source/.vimrc ~/.vimrc
+[ -d ~/.vim ] && echo "Directory ~/.vim exists." || ln -sd `pwd`/source/.vim ~/.vim
 
 # bash configuration
-[ -f ~/.bashrc ] && echo "File ~/.bashrc exists." || ln -s ./source/.bashrc ~/.bashrc
-[ -d ~/.bashrc_other ] && echo "Directory ~/.bashrc_other exists." || ln -sd ./source/.bashrc_other ~/.bashrc_other
+[ -f ~/.bashrc ] && echo "File ~/.bashrc exists." || ln -s `pwd`/source/.bashrc ~/.bashrc
+[ -d ~/.bashrc_other ] && echo "Directory ~/.bashrc_other exists." || ln -sd `pwd`/source/.bashrc_other ~/.bashrc_other
 
 # update submodules
 ./update_modules.sh
