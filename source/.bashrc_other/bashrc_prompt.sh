@@ -42,9 +42,9 @@ __prompt_command() {
     # user, host
     PS1+="${LGray}[\u@\h]${None}"
     # jobs
-    [[ $(jobs | wc -c) -eq 0 ]] || PS1+="${Red}[stopped: \j]${None}"
+    [[ $(jobs | wc -c) -eq 0 ]] || PS1+="${Red}[\\\\j: \j]${None}"
     # error code
-    [[ "$exit_code" == 0 ]] || PS1+="${Red}[error: ${exit_code}]${None}"
+    [[ "$exit_code" == 0 ]] || PS1+="${Red}[\\\$?: ${exit_code}]${None}"
 
     # newline
     PS1+="\n"
